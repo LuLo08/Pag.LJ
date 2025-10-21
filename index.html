@@ -51,27 +51,29 @@
     <!-- CONTENEDOR PRINCIPAL DEL ÍNDICE -->
      <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     
-    <h1 class="text-4xl font-extrabold mb-6 text-gray-900 border-b-4 title-separator pb-2">Índice de Personajes Marvel</h1>
-    
-    <p class="text-lg text-gray-600 mb-8">
-        Explora nuestra enciclopedia de héroes, villanos y equipos del Universo Marvel. Selecciona un personaje para ver su artículo completo.
-    </p>
+        <h1 class="text-4xl font-extrabold mb-6 text-gray-900 border-b-4 title-separator pb-2">Índice de Personajes Marvel</h1>
+        
+        <p class="text-lg text-gray-600 mb-8">
+            Explora nuestra enciclopedia de héroes, villanos y equipos del Universo Marvel. Selecciona un personaje para ver su artículo completo.
+        </p>
 
-    <div id="loading-indicator" class="text-center py-10">
-        <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-red-600 mx-auto"></div>
-        <p class="mt-2 text-red-600 font-semibold">Cargando personajes de Marvel...</p>
-    </div>
-
-    <div id="character-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" style="display: none;">
+        <div id="loading-indicator" class="text-center py-10">
+            <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-red-600 mx-auto"></div>
+            <p class="mt-2 text-red-600 font-semibold">Cargando personajes de Marvel...</p>
         </div>
 
-</main>
+        <div id="character-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" style="display: none;">
+            <!-- El contenido dinámico se insertará aquí -->
+        </div>
+
+    </main>
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js"></script> 
 <script>
-    // ⚠ REEMPLAZA ESTOS VALORES CON TUS CLAVES REALES DE LA API DE MARVEL
-    const PUBLIC_KEY = '41bad4ab676d57615aaca798110d6322'; 
-    const PRIVATE_KEY = 'bc7a0cdb5267005937c44be77df739ff152ab656'; 
+    // ⚠ DEBES REEMPLAZAR ESTOS VALORES CON TUS CLAVES REALES DE LA API DE MARVEL
+    // SI LAS CLAVES SON CORRECTAS Y SIGUE FALLANDO, EL PROBLEMA ES EL DOMINIO AUTORIZADO (REFERRER).
+    const PUBLIC_KEY = 'TU_CLAVE_PUBLICA_AQUI'; // <--- PEGA AQUÍ TU CLAVE PÚBLICA REAL
+    const PRIVATE_KEY = 'TU_CLAVE_PRIVADA_AQUI'; // <--- PEGA AQUÍ TU CLAVE PRIVADA REAL
     // FIN DE LAS CLAVES
     
     const BASE_URL = 'https://gateway.marvel.com/v1/public/characters';
@@ -85,9 +87,10 @@
      */
     function generateMarvelAuth() {
         const ts = Date.now().toString();
-        // Usamos la función md5() de la librería CDN que incluimos en el <head>
+        // Genera el hash combinando el timestamp, la clave privada y la clave pública.
+        // Asegúrate de que la librería md5.min.js esté cargada.
         const hash = md5(ts + PRIVATE_KEY + PUBLIC_KEY); 
-        return ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hash};
+        return `ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hash}`;
     }
 
     /**
@@ -97,7 +100,7 @@
      */
     function createCharacterCard(character) {
         // La API de Marvel proporciona la URL de la imagen.
-        const imageUrl = ${character.thumbnail.path}.${character.thumbnail.extension};
+        const imageUrl = `${character.thumbnail.path}.${character.thumbnail.extension}`;
         
         // La descripción es a menudo demasiado larga, la acortamos si es necesario.
         let description = character.description || 'No hay descripción oficial disponible.';
@@ -111,38 +114,14 @@
         if (detailObj) {
             detailUrl = detailObj.url;
         }
-             <!-- CARD 1: IRON MAN -->
-            <a href="thor.html" class="block bg-white border border-gray-300 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group">
-                <img src="https://placehold.co/600x400/ED1D24/ffffff?text=IRON+MAN" 
-                     alt="Thor" 
-                     class="w-full h-48 object-cover transition duration-500 group-hover:scale-105"
-                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/000/fff?text=No+Image'">
-                <div class="p-4">
-                    <h2 class="text-2xl font-bold text-gray-900 group-hover:text-red-600">Iron Man</h2>
-                    <p class="text-gray-500 text-sm mt-1">Anthony Edward Stark, El Vengador de Hierro.</p>
-                </div>
-            </a>
-        </div>
-                    <h1 class="center">villanos</h1>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-             <!-- CARD 1: IRON MAN -->
-            <a href="cuatro_fantasticos.html" class="block bg-white border border-gray-300 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group">
-                <img src="https://placehold.co/600x400/ED1D24/ffffff?text=IRON+MAN" 
-                     alt="Los Cuatro Fantásticos" 
-                     class="w-full h-48 object-cover transition duration-500 group-hover:scale-105"
-                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/000/fff?text=No+Image'">
-                <div class="p-4">
-                    <h2 class="text-2xl font-bold text-gray-900 group-hover:text-red-600">Iron Man</h2>
-                    <p class="text-gray-500 text-sm mt-1">Anthony Edward Stark, El Vengador de Hierro.</p>
-                </div>
-            </a>
-
+        
+        // La tarjeta ahora enlaza a la URL oficial de Marvel. Usamos target="_blank" para abrir en una pestaña nueva.
         return `
             <a href="${detailUrl}" target="_blank" class="block bg-white border border-gray-300 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group">
                 <img src="${imageUrl}" 
-                     alt="${character.name}" 
-                     class="w-full h-48 object-cover transition duration-500 group-hover:scale-105"
-                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/ED1D24/ffffff?text=No+Image'">
+                    alt="${character.name}" 
+                    class="w-full h-48 object-cover transition duration-500 group-hover:scale-105"
+                    onerror="this.onerror=null; this.src='https://placehold.co/600x400/ED1D24/ffffff?text=No+Image'">
                 <div class="p-4">
                     <h2 class="text-2xl font-bold text-gray-900 group-hover:text-red-600">${character.name}</h2>
                     <p class="text-gray-500 text-sm mt-1">${description}</p>
@@ -155,15 +134,24 @@
      * Función principal para cargar y mostrar los personajes.
      */
     async function fetchMarvelCharacters() {
+        // 1. Verificación de Claves (Solo para alertar al usuario si no las ha cambiado)
+        if (PUBLIC_KEY.includes('41bad4ab676d57615aaca798110d6322') || PRIVATE_KEY.includes('bc7a0cdb5267005937c44be77df739ff152ab656')) {
+             loadingIndicator.innerHTML = '<p class="text-lg text-red-600 font-bold">⚠ ERROR: Por favor, reemplaza "TU_CLAVE_PUBLICA_AQUI" y "TU_CLAVE_PRIVADA_AQUI" con tus claves reales de Marvel.</p>';
+             loadingIndicator.style.display = 'block';
+             return;
+        }
+
         const authParams = generateMarvelAuth();
-        const apiQuery = ${BASE_URL}?${authParams}&limit=${LIMIT}&orderBy=name;
+        const apiQuery = `${BASE_URL}?${authParams}&limit=${LIMIT}&orderBy=name`;
         
         try {
             const response = await fetch(apiQuery);
             
             if (!response.ok) {
-                // Si la respuesta no es 200 OK, lanzamos un error
-                throw new Error(Error ${response.status}: Revisa tus claves API y el límite de llamadas.);
+                // 2. Manejo de Errores de API (Especialmente 401 Unauthorized)
+                const errorData = await response.json();
+                let errorMessage = `Error ${response.status}: ${errorData.status || 'No autorizado. Verifica tus claves y el Dominio Autorizado (Referrer).'}`;
+                throw new Error(errorMessage);
             }
             
             const data = await response.json();
@@ -176,32 +164,7 @@
                     charactersHtml += createCharacterCard(character);
                 }
             });
-             <!-- CARD 1: IRON MAN -->
-            <a href="xmen.html" class="block bg-white border border-gray-300 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group">
-                <img src="https://placehold.co/600x400/ED1D24/ffffff?text=IRON+MAN" 
-                     alt="Los X-men" 
-                     class="w-full h-48 object-cover transition duration-500 group-hover:scale-105"
-                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/000/fff?text=No+Image'">
-                <div class="p-4">
-                    <h2 class="text-2xl font-bold text-gray-900 group-hover:text-red-600">Iron Man</h2>
-                    <p class="text-gray-500 text-sm mt-1">Anthony Edward Stark, El Vengador de Hierro.</p>
-                </div>
-            </a>
-        </div>
-                      <h1 class="center">Equipos</h1>  
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-             <!-- CARD 1: IRON MAN -->
-            <a href="loki.html" class="block bg-white border border-gray-300 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group">
-                <img src="https://placehold.co/600x400/ED1D24/ffffff?text=IRON+MAN" 
-                     alt="Loki" 
-                     class="w-full h-48 object-cover transition duration-500 group-hover:scale-105"
-                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/000/fff?text=No+Image'">
-                <div class="p-4">
-                    <h2 class="text-2xl font-bold text-gray-900 group-hover:text-red-600">Iron Man</h2>
-                    <p class="text-gray-500 text-sm mt-1">Anthony Edward Stark, El Vengador de Hierro.</p>
-                </div>
-            </a>
-
+            
             // Ocultar el indicador de carga y mostrar la cuadrícula
             loadingIndicator.style.display = 'none';
             characterGrid.innerHTML = charactersHtml;
@@ -217,18 +180,11 @@
         }
     }
 
+    // Implementación simple de Backoff para manejo de errores de red o límites (opcional pero recomendado)
+    // No implementaremos el backoff completo para mantener el código simple, pero es buena práctica.
+    
     // Ejecutar la función cuando el DOM esté completamente cargado
     document.addEventListener('DOMContentLoaded', fetchMarvelCharacters);
 </script>
-</body>
-</html>
-    
-    <!-- PIE DE PÁGINA GENERAL -->
-    <footer class="bg-gray-200 text-gray-600 text-xs py-4 mt-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p>&copy; 2025 M-Wiki. Todos los derechos reservados. | Esta página es un ejemplo de diseño web y no es un sitio web oficial de Marvel.</p>
-        </div>
-    </footer>
-
 </body>
 </html>
