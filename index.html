@@ -135,7 +135,7 @@
      */
     async function fetchMarvelCharacters() {
         // 1. Verificación de Claves (Solo para alertar al usuario si no las ha cambiado)
-        if (PUBLIC_KEY.includes('TU_CLAVE') || PRIVATE_KEY.includes('TU_CLAVE')) {
+        if (PUBLIC_KEY.includes('41bad4ab676d57615aaca798110d6322') || PRIVATE_KEY.includes('bc7a0cdb5267005937c44be77df739ff152ab656')) {
              loadingIndicator.innerHTML = '<p class="text-lg text-red-600 font-bold">⚠ ERROR: Por favor, reemplaza "TU_CLAVE_PUBLICA_AQUI" y "TU_CLAVE_PRIVADA_AQUI" con tus claves reales de Marvel.</p>';
              loadingIndicator.style.display = 'block';
              return;
