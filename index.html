@@ -1,113 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <title>Página de Harry Potter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice de Personajes Marvel - M-Wiki</title>
+    <!-- Carga de Tailwind CSS para estilos modernos y responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        h2 {
-  color: #1c297e;
-}
-h1
- {
-  color: #1c297e;
-  width: 500px;
-  border: 1px solid #1c297e;
-}
-html {                               
-  font-size: 20px;
-  font-family:
-    "Courier New", sans-serif; 
-}
-body {
-  width: 600px;
-  margin: 0 auto;
-  background-color: #aecee2;
-  padding: 0 20px 20px 20px;
-  border: 5px solid black;
-}
-h1 {
-  margin: 0;
-  padding: 20px 0;
-  color: #7b172b;
-  text-shadow: 3px 3px 1px black;
-}
-img {
-  display: block;
-  margin: 0 auto;
-}
-h1 {
-  animation-duration: 3s;
-  animation-name: slidein;
-}
+        /* Configuraciones de fuente y colores base */
+        :root {
+            --marvel-red: #ED1D24;
+            --marvel-blue: #0078FF; /* Usado para enlaces */
+            --bg-light: #f9f9f9;
+        }
 
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-
-</style>
-</html>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+        }
+        
+        /* Estilo para los títulos */
+        .title-separator {
+            border-color: var(--marvel-red);
+        }
+    </style>
 </head>
+<body class="text-gray-800">
 
-<body>
-    <h1>El Mundo de Harry Potter</h1>
+    <!-- BARRA DE NAVEGACIÓN SUPERIOR (Sticky) -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <div class="flex items-center">
+                <!-- Logo Wiki -->
+                <a href="index.html" class="text-3xl font-extrabold tracking-tight text-red-600">
+                    M-Wiki
+                </a>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-red-600 font-medium transition duration-150 ease-in-out">Personajes</a>
+                <a href="#" class="text-gray-600 hover:text-red-600 font-medium transition duration-150 ease-in-out">Equipos</a>
+                <a href="#" class="text-gray-600 hover:text-red-600 font-medium transition duration-150 ease-in-out">Comics</a>
+            </nav>
+            <!-- Barra de Búsqueda -->
+            <div class="hidden md:block">
+                <input type="search" placeholder="Buscar en M-Wiki..." class="p-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500 transition duration-150">
+            </div>
+        </div>
+    </header>
 
-  <p>
-    Harry Potter es una de las sagas más famosas de la literatura y el cine. 
-    Narra las aventuras de un joven mago y sus amigos en el Colegio Hogwarts de Magia y Hechicería.
-  </p>
+    <!-- CONTENEDOR PRINCIPAL DEL ÍNDICE -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- TÍTULO PRINCIPAL -->
+        <h1 class="text-4xl font-extrabold mb-6 text-gray-900 border-b-4 title-separator pb-2">Índice de Personajes Marvel</h1>
+        
+        <!-- INTRODUCCIÓN -->
+        <p class="text-lg text-gray-600 mb-8">
+            Explora nuestra enciclopedia de héroes, villanos y equipos del Universo Marvel. Selecciona un personaje para ver su artículo completo.
+        </p>
 
-  <p>
-    A lo largo de siete libros y ocho películas, se exploran temas como la amistad, la valentía 
-    y la lucha contra el mal representado por Lord Voldemort.
-  </p>
+        <!-- CUADRÍCULA DE PERSONAJES (3 MOCK CHARACTERS) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-  <p>
-    Este mundo mágico incluye criaturas fantásticas, hechizos sorprendentes y objetos encantados 
-    que forman parte del día a día de los magos.
-  </p>
-     <img src="img/harry.jpeg">
-    <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg0TmqHkOiTOkzohadTM_xwrcx6EKlxZFLzw&s" alt = "HTML">
-    <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbz3qAbPZgW7gNyQldi5mE6ZGg1TwFeLypGw&shttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbz3qAbPZgW7gNyQldi5mE6ZGg1TwFeLypGw&s" alt = "HTML">
+            <!-- CARD 1: IRON MAN -->
+            <a href="marvel_wiki_template.html" class="block bg-white border border-gray-300 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group">
+                <img src="https://placehold.co/600x400/ED1D24/ffffff?text=IRON+MAN" 
+                     alt="Iron Man" 
+                     class="w-full h-48 object-cover transition duration-500 group-hover:scale-105"
+                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/000/fff?text=No+Image'">
+                <div class="p-4">
+                    <h2 class="text-2xl font-bold text-gray-900 group-hover:text-red-600">Iron Man</h2>
+                    <p class="text-gray-500 text-sm mt-1">Anthony Edward Stark, El Vengador de Hierro.</p>
+                </div>
+            </a>
 
-  <h2>Personajes principales</h2>
-  <ul>
-    <li>Harry Potter</li>
-    <li>Hermione Granger</li>
-    <li>Ron Weasley</li>
-  </ul>
+            <!-- CARD 2: CAPITÁN AMÉRICA -->
+            <a href="#" class="block bg-white border border-gray-300 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group">
+                <img src="https://placehold.co/600x400/0078FF/ffffff?text=CAPIT%C3%81N+AM%C3%89RICA" 
+                     alt="Capitán América" 
+                     class="w-full h-48 object-cover transition duration-500 group-hover:scale-105"
+                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/000/fff?text=No+Image'">
+                <div class="p-4">
+                    <h2 class="text-2xl font-bold text-gray-900 group-hover:text-red-600">Capitán América</h2>
+                    <p class="text-gray-500 text-sm mt-1">Steve Rogers, el supersoldado y líder de los Vengadores.</p>
+                </div>
+            </a>
 
-  <h2>Casas de Hogwarts</h2>
-  <ul>
-    <li>Gryffindor</li>
-    <li>Slytherin</li>
-    <li>Ravenclaw</li>
-    <li>Hufflepuff</li>
-  </ul>
+            <!-- CARD 3: BLACK WIDOW -->
+            <a href="#" class="block bg-white border border-gray-300 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group">
+                <img src="https://placehold.co/600x400/000000/ffffff?text=BLACK+WIDOW" 
+                     alt="Black Widow" 
+                     class="w-full h-48 object-cover transition duration-500 group-hover:scale-105"
+                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/000/fff?text=No+Image'">
+                <div class="p-4">
+                    <h2 class="text-2xl font-bold text-gray-900 group-hover:text-red-600">Black Widow</h2>
+                    <p class="text-gray-500 text-sm mt-1">Natasha Romanoff, la espía maestra de S.H.I.E.L.D.</p>
+                </div>
+            </a>
+            
+        </div>
 
-  <h2>Objetos mágicos</h2>
-  <ul>
-    <li>La Varita de Saúco</li>
-    <li>La Piedra Filosofal</li>
-    <li>La Capa de Invisibilidad</li>
-  </ul>
+    </main>
+    
+    <!-- PIE DE PÁGINA GENERAL -->
+    <footer class="bg-gray-200 text-gray-600 text-xs py-4 mt-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 M-Wiki. Todos los derechos reservados. | Esta página es un ejemplo de diseño web y no es un sitio web oficial de Marvel.</p>
+        </div>
+    </footer>
 
-  <h2>Enlaces mágicos</h2>
-  <p>
-    Puedes visitar estas páginas para aprender más:
-  </p>
-  <ul>
-    <li><a href="https://www.wizardingworld.com/" target="_blank">Wizarding World</a></li>
-    <li><a href="https://es.wikipedia.org/wiki/Harry_Potter" target="_blank">Wikipedia - Harry Potter</a></li>
-    <li><a href="https://harrypotter.fandom.com/es/wiki/Harry_Potter" target="_blank">Harry Potter Wiki</a></li>
 </body>
-
 </html>
