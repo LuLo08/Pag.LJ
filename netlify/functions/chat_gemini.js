@@ -1,57 +1,17 @@
+// Archivo: netlify/functions/gemini-chat.js
 
+// 1. Importación del SDK (Sintaxis de Node.js, usa 'require')
+const { GoogleGenAI } = require("@google/genai"); 
 
-// Inicializa el cliente. Utiliza la variable de entorno API_KEY
-// Netlify la inyectará automáticamente desde tu configuración.
+// 2. Inicialización del cliente de la API
+// La variable de entorno GEMINI_API_KEY se lee de forma segura aquí
 const ai = new GoogleGenAI({ 
     apiKey: process.env.GEMINI_API_KEY 
 });
 
-// Este es el manejador principal de la función
+// 3. El manejador principal que Netlify busca
 exports.handler = async (event) => {
-    // 1. Verificar el método (solo acepta POST)
-    if (event.httpMethod !== "POST") {
-        return { 
-            statusCode: 405, 
-            body: "Método no permitido. Usa POST." 
-        };
-    }
-    
-    // 2. Extraer el prompt del cuerpo de la solicitud (enviado desde chat_gemini.js)
-    const data = JSON.parse(event.body);
-    const userPrompt = data.prompt;
-
-    if (!userPrompt) {
-        return { 
-            statusCode: 400, 
-            body: JSON.stringify({ error: "Falta el campo 'prompt'." }) 
-        };
-    }
-
-    try {
-        // 3. Llamar a la API de Gemini
-        const result = await ai.models.generateContent({
-            model: 'gemini-2.5-flash', // Modelo rápido y eficiente
-            contents: userPrompt,
-            config: {
-                systemInstruction: "Eres un experto en el Universo Marvel y proporcionas respuestas concisas y precisas sobre personajes, equipos e historias.",
-                temperature: 0.7 
-            }
-        });
-
-        const geminiResponse = result.text.trim();
-
-        // 4. Devolver la respuesta al frontend
-        return {
-            statusCode: 200,
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ response: geminiResponse }),
-        };
-
-    } catch (error) {
-        console.error("Error al llamar a Gemini:", error);
-        return {
-            statusCode: 500,
-            body: JSON.stringify({ error: "Error al comunicarse con la IA." }),
-        };
-    }
+    // 4. Lógica de manejo de errores y llamada a la API
+    // ... (Asegúrate de que el código para llamar a la API esté correcto) ...
+    // ... (Si copiaste el código que te di, debería estar bien) ...
 };
