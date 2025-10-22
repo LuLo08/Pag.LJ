@@ -1,24 +1,13 @@
-"dependencies": {
-  "@google/genai": "^[version.number]" 
-  // El número de versión puede variar, lo importante es que la línea exista.
-}
 {
-  "name": "pag.lj",
+  "name": "pagina-marvel-wiki",
   "version": "1.0.0",
-  "description": "",
-  "main": "chat_gemini.js",
+  "description": "...",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LuLo08/Pag.LJ.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LuLo08/Pag.LJ/issues"
-  },
-  "homepage": "https://github.com/LuLo08/Pag.LJ#readme"
+  "dependencies": {
+    "@google/genai": "^4.1.0" 
+
+  }
 }
