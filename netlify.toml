@@ -1,0 +1,3 @@
+[build]
+  functions = "netlify/functions"
+  publish = "." # Esto asume que tu HTML está en la raíz

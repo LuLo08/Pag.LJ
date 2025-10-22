@@ -182,6 +182,7 @@
 
              <!-- CARD 1: IRON MAN -->
             <a href="thanos.html" class="block bg-white border border-gray-300 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group">
+                <img src="" 
                 <img src="https://lulo08.github.io/Pag.LJ/img/thanos.jpg" 
                      alt="Thanos" 
                      class="w-full h-48 object-cover transition duration-500 group-hover:scale-105"
@@ -203,6 +204,29 @@
                     <p class="text-gray-500 text-sm mt-1">Anthony Edward Stark, El Vengador de Hierro.</p>
                 </div>
             </a>
+        </div>
+        <div class="mt-12 p-6 bg-white border-2 border-red-600 rounded-xl shadow-2xl">
+    <h2 class="text-3xl font-bold text-red-600 mb-4 border-b pb-2">🤔 Asistente de Consulta M-Wiki (IA)</h2>
+    <p class="text-gray-700 mb-4">
+        ¿No encuentras a un personaje? Pregúntale a nuestro asistente potenciado por IA (Gemini) sobre cualquier otro héroe, villano o concepto de Marvel.
+    </p>
+
+    <div id="chat-container" class="h-64 overflow-y-auto p-3 mb-4 border border-gray-300 bg-gray-50 rounded-lg">
+        <p class="text-gray-500">
+            <strong>Asistente:</strong> ¡Hola! Pregúntame sobre cualquier personaje, equipo o historia de Marvel. Por ejemplo: "¿Quién es Galactus?"
+        </p>
+    </div>
+
+    <form id="ai-query-form" class="flex gap-2">
+        <input type="text" id="user-prompt" placeholder="Escribe tu pregunta sobre Marvel (ej: '¿Quién es Thanos?')..."
+               class="flex-grow p-3 border border-gray-400 rounded-lg focus:ring-red-500 focus:border-red-500" required>
+        <button type="submit" id="send-button"
+                class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200">
+            Enviar
+        </button>
+    </form>
+</div>
+
     </main>
     
     <!-- PIE DE PÁGINA GENERAL -->
@@ -211,6 +235,6 @@
             <p>&copy; 2025 M-Wiki. Todos los derechos reservados. | Esta página es un ejemplo de diseño web y no es un sitio web oficial de Marvel.</p>
         </div>
     </footer>
-
-</body>
+    <script src="chat_gemini.js"></script> 
+    </body>
 </html>
