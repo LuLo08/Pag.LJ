@@ -39,17 +39,19 @@
             <nav class="hidden md:flex space-x-8">
                 <a href="index.html" class="text-gray-600 hover:text-red-600 font-medium transition duration-150 ease-in-out">Personajes</a>
 
-                <a href="#" class="text-gray-600 hover:text-red-600 font-medium transition duration-150 ease-in-out">Equipos</a>
-
                 <a href="multiversos.html" class="text-gray-600 hover:text-red-600 font-medium transition duration-150 ease-in-out">Multiversos</a>
 
-        
                 <a href="comics.html" class="text-gray-600 hover:text-red-600 font-medium transition duration-150 ease-in-out">Comics</a>
             </nav>
             <!-- Barra de Búsqueda -->
             <div class="hidden md:block">
-                <input type="search" placeholder="Buscar en M-Wiki..." class="p-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500 transition duration-150">
-            </div>
+    <form action="/buscar" method="GET">
+        <input type="search" 
+               placeholder="Buscar en M-Wiki..." 
+               name="q" 
+               class="p-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500 transition duration-150">
+        </form>
+</div>
         </div>
     </header>
 
