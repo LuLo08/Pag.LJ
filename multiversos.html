@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Índice de Multiversos — M-Wiki</title>
+  <style>
+    /* Reset sencillo */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html,body { height: 100%; font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif; color:#222; background:#fafafa; }
+
+    /* Cabecera */
+    .topbar {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:18px 36px;
+      background:#fff;
+      border-bottom:1px solid #eee;
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+    .brand { display:flex; align-items:center; gap:14px; }
+    .brand h1 { font-size:20px; color:#e53935; margin:0; font-weight:700; letter-spacing:0.2px; }
+    .nav {
+      display:flex;
+      gap:18px;
+      align-items:center;
+      color:#555;
+      font-weight:600;
+    }
+    .search {
+      margin-left:24px;
+    }
+    .search input {
+      padding:10px 14px;
+      border-radius:6px;
+      border:1px solid #ddd;
+      min-width:240px;
+    }
+
+    /* Contenedor */
+    .container {
+      max-width:1200px;
+      margin:34px auto;
+      padding:0 28px 80px;
+    }
+
+    /* Título principal */
+    .page-title {
+      font-size:44px;
+      font-weight:800;
+      color:#111;
+      margin-bottom:6px;
+    }
+    .title-underline {
+      height:6px;
+      width:100%;
+      max-width:980px;
+      background:linear-gradient(90deg,#e53935 0,#e53935 100%);
+      margin:10px 0 20px 0;
+      border-radius:2px;
+    }
+    .intro {
+      color:#666;
+      margin-bottom:28px;
+      font-size:16px;
+      max-width:980px;
+    }
+
+    /* Grid de tarjetas */
+    .grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+      gap:22px;
+    }
+
+    .card {
+      background:#fff;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow: 0 6px 18px rgba(20,20,20,0.06);
+      display:flex;
+      flex-direction:column;
+      min-height:260px;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 36px rgba(20,20,20,0.12);
+    }
+    .card .media {
+      height:160px;
+      background-size:cover;
+      background-position:center;
+      flex-shrink:0;
+    }
+    .card .content {
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .card h3 {
+      font-size:22px;
+      margin:0;
+      color:#111;
+      font-weight:800;
+    }
+    .card p {
+      color:#666;
+      font-size:14px;
+      line-height:1.35;
+      margin:0;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width:760px) {
+      .page-title { font-size:34px; }
+      .search input { min-width:140px; }
+      .card .media { height:140px; }
+    }
+
+    /* Small footer note */
+    .footer-note {
+      margin-top:28px;
+      color:#888;
+      font-size:13px;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1>M-Wiki</h1>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#" style="text-decoration:none;color:#444">Personajes</a>
+        <a href="#" style="text-decoration:none;color:#444;font-weight:800">Multiversos</a>
+        <a href="#" style="text-decoration:none;color:#444">Comics</a>
+      </nav>
+    </div>
+
+    <div class="search" role="search">
+      <input type="search" placeholder="Buscar en M-Wiki..." aria-label="Buscar"/>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <h2 class="page-title">Índice de Multiversos</h2>
+    <div class="title-underline" aria-hidden="true"></div>
+
+    <p class="intro">
+      Explora las distintas realidades y líneas temporales del universo Marvel. Haz clic en un multiverso para ver su descripción completa, personajes y eventos destacados.
+    </p>
+
+    <section class="grid" aria-label="Lista de Multiversos">
+      <!-- Card 1 -->
+      <article class="card" role="article" aria-labelledby="m-616">
+        <div class="media" style="background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22160%22><rect width=%22300%22 height=%22160%22 fill=%22%23f1c40f%22 rx=%2212%22 ry=%2212%22/><text x=%2216%22 y=%2292%22 font-size=%2226%22 font-family=%22Arial%22 fill=%22%230b0b0b%22>Tierra-616</text><text x=%2216%22 y=%22118%22 font-size=%2210%22 font-family=%22Arial%22 fill=%22%230b0b0b%22>Universo principal de Marvel</text></svg>');"></div>
+        <div class="content">
+          <h3 id="m-616">Tierra-616</h3>
+          <p>La continuidad principal del Universo Marvel clásico: ahí ocurren la mayoría de los cómics tradicionales de Marvel.</p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card" role="article" aria-labelledby="m-1610">
+        <div class="media" style="background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22160%22><rect width=%22300%22 height=%22160%22 fill=%22%238e44ad%22 rx=%2212%22 ry=%2212%22/><text x=%2216%22 y=%2292%22 font-size=%2226%22 font-family=%22Arial%22 fill=%22%23ffffff%22>Tierra-1610</text><text x=%2216%22 y=%22118%22 font-size=%2210%22 font-family=%22Arial%22 fill=%22%23ffffff%22>(Ultimate)</text></svg>');"></div>
+        <div class="content">
+          <h3 id="m-1610">Tierra-1610 (Ultimate)</h3>
+          <p>Reimaginación moderna de personajes y orígenes — historias más oscuras y contemporáneas que la continuidad clásica.</p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card" role="article" aria-labelledby="m-mcu">
+        <div class="media" style="background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22160%22><rect width=%22300%22 height=%22160%22 fill=%22%23349ef6%22 rx=%2212%22 ry=%2212%22/><text x=%2216%22 y=%2292%22 font-size=%2226%22 font-family=%22Arial%22 fill=%22%23fff%22>MCU</text><text x=%2216%22 y=%22118%22 font-size=%2210%22 font-family=%22Arial%22 fill=%22%23fff%22>Marvel Cinematic Universe</text></svg>');"></div>
+        <div class="content">
+          <h3 id="m-mcu">MCU (Tierra-199999)</h3>
+          <p>Continuidad de las películas y series del Universo Cinematográfico Marvel; eventos y versiones adaptadas para cine y TV.</p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card" role="article" aria-labelledby="m-whatif">
+        <div class="media" style="background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22160%22><rect width=%22300%22 height=%22160%22 fill=%22%23ec7063%22 rx=%2212%22 ry=%2212%22/><text x=%2216%22 y=%2292%22 font-size=%2226%22 font-family=%22Arial%22 fill=%22%23fff%22>What If...?</text><text x=%2216%22 y=%22118%22 font-size=%2210%22 font-family=%22Arial%22 fill=%22%23fff%22>Realidades alternativas</text></svg>');"></div>
+        <div class="content">
+          <h3 id="m-whatif">What If...?</h3>
+          <p>Historias que exploran cómo cambiarían eventos clave si hubieran ocurrido de forma distinta: ramificaciones y realidades alternativas.</p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card" role="article" aria-labelledby="m-spiderverse">
+        <div class="media" style="background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22160%22><rect width=%22300%22 height=%22160%22 fill=%22%2370c38f%22 rx=%2212%22 ry=%2212%22/><text x=%2216%22 y=%2292%22 font-size=%2226%22 font-family=%22Arial%22 fill=%22%230b0b0b%22>Spider-Verse</text><text x=%2216%22 y=%22118%22 font-size=%2210%22 font-family=%22Arial%22 fill=%22%230b0b0b%22>Variantes arácnidas</text></svg>');"></div>
+        <div class="content">
+          <h3 id="m-spiderverse">Spider-Verse</h3>
+          <p>Multiverso donde coexisten múltiples versiones de Spider-Man/Spider-Women de realidades diferentes — encuentros entre variantes.</p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card" role="article" aria-labelledby="m-2149">
+        <div class="media" style="background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22160%22><rect width=%22300%22 height=%22160%22 fill=%22%23000000%22 rx=%2212%22 ry=%2212%22/><text x=%2216%22 y=%2292%22 font-size=%2226%22 font-family=%22Arial%22 fill=%22%23fff%22>Tierra-2149</text><text x=%2216%22 y=%22118%22 font-size=%2210%22 font-family=%22Arial%22 fill=%22%23fff%22>Marvel Zombies</text></svg>');"></div>
+        <div class="content">
+          <h3 id="m-2149">Tierra-2149 (Marvel Zombies)</h3>
+          <p>Una plaga cósmica convierte a héroes y villanos en zombis: versiones macabras de los personajes que devoran su mundo.</p>
+        </div>
+      </article>
+
+      <!-- Card 7 -->
+      <article class="card" role="article" aria-labelledby="m-2099">
+        <div class="media" style="background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22160%22><rect width=%22300%22 height=%22160%22 fill=%22%232ecc71%22 rx=%2212%22 ry=%2212%22/><text x=%2216%22 y=%2292%22 font-size=%2226%22 font-family=%22Arial%22 fill=%22%230b0b0b%22>Tierra-2099</text><text x=%2216%22 y=%22118%22 font-size=%2210%22 font-family=%22Arial%22 fill=%22%230b0b0b%22>Marvel 2099</text></svg>');"></div>
+        <div class="content">
+          <h3 id="m-2099">Tierra-2099</h3>
+          <p>Futuro cibernético con versiones alternativas de héroes en una megaciudad distópica (la línea '2099' de Marvel).</p>
+        </div>
+      </article>
+
+      <!-- Card 8 -->
+      <article class="card" role="article" aria-labelledby="m-mm">
+        <div class="media" style="background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22160%22><rect width=%22300%22 height=%22160%22 fill=%22%23f39c12%22 rx=%2212%22 ry=%2212%22/><text x=%2216%22 y=%2292%22 font-size=%2226%22 font-family=%22Arial%22 fill=%22%230b0b0b%22>Multiverso de Fusión</text><text x=%2216%22 y=%22118%22 font-size=%2210%22 font-family=%22Arial%22 fill=%22%230b0b0b%22>Versiones combinadas</text></svg>');"></div>
+        <div class="content">
+          <h3 id="m-mm">Multiverso de Fusión</h3>
+          <p>Realidades creadas por fusiones y cruces: mundos en los que se combinan personajes, historias y reglas de varias líneas temporales.</p>
+        </div>
+      </article>
+
+      <!-- Card 9 -->
+      <article class="card" role="article" aria-labelledby="m-otras">
+        <div class="media" style="background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22160%22><rect width=%22300%22 height=%22160%22 fill=%22%239e9e9e%22 rx=%2212%22 ry=%2212%22/><text x=%2216%22 y=%2292%22 font-size=%2226%22 font-family=%22Arial%22 fill=%22%23fff%22>Otras Tierras</text><text x=%2216%22 y=%22118%22 font-size=%2210%22 font-family=%22Arial%22 fill=%22%23fff%22>Infinitas variaciones</text></svg>');"></div>
+        <div class="content">
+          <h3 id="m-otras">Otras Tierras y Realidades</h3>
+          <p>Infinidad de mundos alternativos: desde realidades pequeñas hasta hoaxes cósmicos — cada una con su propia historia.</p>
+        </div>
+      </article>
+    </section>
+
+    <p class="footer-note">Nota: haz clic en cualquier tarjeta para ver la ficha dedicada del multiverso (aún por implementar).</p>
+  </main>
+</body>
