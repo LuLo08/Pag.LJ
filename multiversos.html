@@ -1,236 +1,128 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MARVEL — M.Wiki</title>
-  <link rel="icon" type="image/png" href="logoposta.png">
+<head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>MARVEL - M.Wiki</title> <link rel="icon" type="image/png" href="logoposta.png"> <!-- Carga de Tailwind CSS para estilos modernos y responsivos --> <script src="https://cdn.tailwindcss.com"></script> <style> /* Configuraciones de fuente y colores base */ :root { --marvel-red: #ED1D24; --marvel-blue: #0078FF; /* Usado para enlaces */ --bg-light: #f9f9f9; } body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); } /* Estilo para los títulos */ .title-separator { border-color: var(--marvel-red); } </style> </head>
+<body class="min-h-screen flex flex-col">
+    <!-- Barra superior -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+            <h1 class="text-2xl font-extrabold text-[var(--marvel-red)]">M-Wiki</h1>
+            <nav class="flex space-x-6 font-semibold text-gray-700">
+                <a href="personajes.html" class="hover:text-[var(--marvel-red)]">Personajes</a>
+                <a href="multiversos.html" class="text-[var(--marvel-red)] font-bold">Multiversos</a>
+                <a href="comics.html" class="hover:text-[var(--marvel-red)]">Comics</a>
+            </nav>
+            <div>
+                <input type="text" placeholder="Buscar en M-Wiki..."
+                    class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--marvel-red)]">
+            </div>
+        </div>
+    </header>
 
-  <!-- Fuente y variables base -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    :root {
-      --marvel-red: #ED1D24;
-      --marvel-blue: #0078FF;
-      --bg-light: #fafafa;
-    }
+    <!-- Contenido principal -->
+    <main class="flex-grow max-w-7xl mx-auto px-6 py-10">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2">Índice de Multiversos</h2>
+        <hr class="border-t-4 title-separator w-full mb-6">
+        <p class="text-gray-700 mb-10">
+            Explora las distintas realidades y líneas temporales del Universo Marvel. Haz clic en un multiverso para ver su descripción completa, personajes y eventos destacados.
+        </p>
 
-    body {
-      font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
-      background-color: var(--bg-light);
-    }
+        <!-- Grid de tarjetas -->
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Multiverso 1 -->
+            <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4">
+                <img src="https://upload.wikimedia.org/wikipedia/en/9/9c/Marvel_Universe_616_logo.png"
+                    alt="Tierra-616" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="text-2xl font-bold mt-4">Tierra-616</h3>
+                <p class="text-gray-600 text-sm mt-1">
+                    La continuidad principal del Universo Marvel clásico, donde ocurren la mayoría de los cómics tradicionales.
+                </p>
+            </div>
 
-    /* Reset sencillo */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html,body { height: 100%; color:#222; }
+            <!-- Multiverso 2 -->
+            <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4">
+                <img src="https://upload.wikimedia.org/wikipedia/en/8/8a/Ultimate_Marvel_logo.png"
+                    alt="Tierra-1610" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="text-2xl font-bold mt-4">Tierra-1610 (Ultimate)</h3>
+                <p class="text-gray-600 text-sm mt-1">
+                    Reimaginación moderna de héroes y orígenes, con historias más crudas y contemporáneas.
+                </p>
+            </div>
 
-    /* Cabecera */
-    .topbar {
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:18px 36px;
-      background:#fff;
-      border-bottom:1px solid #eee;
-      position:sticky;
-      top:0;
-      z-index:10;
-    }
-    .brand { display:flex; align-items:center; gap:14px; }
-    .brand h1 { font-size:20px; color:var(--marvel-red); margin:0; font-weight:700; letter-spacing:0.2px; }
-    .nav {
-      display:flex;
-      gap:18px;
-      align-items:center;
-      color:#555;
-      font-weight:600;
-    }
-    .search { margin-left:24px; }
-    .search input {
-      padding:10px 14px;
-      border-radius:6px;
-      border:1px solid #ddd;
-      min-width:240px;
-    }
+            <!-- Multiverso 3 -->
+            <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Marvel_Cinematic_Universe_logo.png"
+                    alt="MCU" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="text-2xl font-bold mt-4">MCU (Tierra-199999)</h3>
+                <p class="text-gray-600 text-sm mt-1">
+                    Continuidad del Universo Cinematográfico Marvel, adaptada para cine y televisión.
+                </p>
+            </div>
 
-    /* Contenedor */
-    .container {
-      max-width:1200px;
-      margin:34px auto;
-      padding:0 28px 80px;
-    }
+            <!-- Multiverso 4 -->
+            <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4">
+                <img src="https://upload.wikimedia.org/wikipedia/en/4/47/What_If%3F_Logo.svg"
+                    alt="What If" class="w-full h-48 object-cover rounded-lg bg-black">
+                <h3 class="text-2xl font-bold mt-4">What If...?</h3>
+                <p class="text-gray-600 text-sm mt-1">
+                    Realidades alternativas que muestran cómo cambiarían los eventos clave del universo Marvel.
+                </p>
+            </div>
 
-    /* Título principal */
-    .page-title {
-      font-size:44px;
-      font-weight:800;
-      color:#111;
-      margin-bottom:6px;
-    }
-    .title-underline {
-      height:6px;
-      width:100%;
-      max-width:980px;
-      background:linear-gradient(90deg,var(--marvel-red) 0,var(--marvel-red) 100%);
-      margin:10px 0 20px 0;
-      border-radius:2px;
-    }
-    .intro {
-      color:#666;
-      margin-bottom:28px;
-      font-size:16px;
-      max-width:980px;
-    }
+            <!-- Multiverso 5 -->
+            <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4">
+                <img src="https://upload.wikimedia.org/wikipedia/en/f/f3/Spider-Verse_%282018_film%29_logo.png"
+                    alt="Spider-Verse" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="text-2xl font-bold mt-4">Spider-Verse</h3>
+                <p class="text-gray-600 text-sm mt-1">
+                    Realidades interconectadas donde existen múltiples variantes del Hombre Araña.
+                </p>
+            </div>
 
-    /* Grid de tarjetas */
-    .grid {
-      display:grid;
-      grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
-      gap:22px;
-    }
+            <!-- Multiverso 6 -->
+            <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4">
+                <img src="https://upload.wikimedia.org/wikipedia/en/4/47/Marvel_Zombies_logo.png"
+                    alt="Marvel Zombies" class="w-full h-48 object-cover rounded-lg bg-black">
+                <h3 class="text-2xl font-bold mt-4">Tierra-2149 (Marvel Zombies)</h3>
+                <p class="text-gray-600 text-sm mt-1">
+                    Una plaga cósmica convierte a héroes y villanos en zombis caníbales.
+                </p>
+            </div>
 
-    .card {
-      background:#fff;
-      border-radius:12px;
-      overflow:hidden;
-      box-shadow: 0 6px 18px rgba(20,20,20,0.06);
-      display:flex;
-      flex-direction:column;
-      min-height:260px;
-      transition: transform .18s ease, box-shadow .18s ease;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 18px 36px rgba(20,20,20,0.12);
-    }
-    .card .media {
-      height:160px;
-      background-size:cover;
-      background-position:center;
-      flex-shrink:0;
-    }
-    .card .content {
-      padding:18px;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      gap:10px;
-    }
-    .card h3 {
-      font-size:22px;
-      margin:0;
-      color:#111;
-      font-weight:800;
-    }
-    .card p {
-      color:#666;
-      font-size:14px;
-      line-height:1.35;
-      margin:0;
-    }
+            <!-- Multiverso 7 -->
+            <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4">
+                <img src="https://upload.wikimedia.org/wikipedia/en/2/24/Marvel_2099_logo.png"
+                    alt="Tierra-2099" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="text-2xl font-bold mt-4">Tierra-2099</h3>
+                <p class="text-gray-600 text-sm mt-1">
+                    Futuro distópico donde nuevas generaciones heredan los legados de los héroes clásicos.
+                </p>
+            </div>
 
-    /* Responsive tweaks */
-    @media (max-width:760px) {
-      .page-title { font-size:34px; }
-      .search input { min-width:140px; }
-      .card .media { height:140px; }
-    }
+            <!-- Multiverso 8 -->
+            <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4">
+                <img src="https://upload.wikimedia.org/wikipedia/en/f/f0/Amalgam_Comics_logo.png"
+                    alt="Fusión" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="text-2xl font-bold mt-4">Multiverso de Fusión</h3>
+                <p class="text-gray-600 text-sm mt-1">
+                    Realidades donde se mezclan héroes y universos, combinando elementos de distintas sagas.
+                </p>
+            </div>
 
-    /* Small footer note */
-    .footer-note {
-      margin-top:28px;
-      color:#888;
-      font-size:13px;
-    }
-  </style>
-</head>
-<body>
-  <header class="topbar">
-    <div class="brand">
-      <h1>M-Wiki</h1>
-      <nav class="nav" aria-label="Navegación principal">
-        <a href="personajes.html" style="text-decoration:none;color:#444">Personajes</a>
-        <a href="multiversos.html" style="text-decoration:none;color:#444;font-weight:800">Multiversos</a>
-        <a href="#" style="text-decoration:none;color:#444">Comics</a>
-      </nav>
-    </div>
-
-    <div class="search" role="search">
-      <input type="search" placeholder="Buscar en M-Wiki..." aria-label="Buscar"/>
-    </div>
-  </header>
-
-  <main class="container" role="main">
-    <h2 class="page-title">Índice de Multiversos</h2>
-    <div class="title-underline" aria-hidden="true"></div>
-
-    <p class="intro">
-      Explora las distintas realidades y líneas temporales del universo Marvel. Haz clic en un multiverso para ver su descripción completa, personajes y eventos destacados.
-    </p>
-
-    <section class="grid" aria-label="Lista de Multiversos">
-      <article class="card">
-        <a href="#" style="text-decoration:none;color:inherit;">
-          <div class="media" style="background:#f1c40f;"></div>
-          <div class="content">
-            <h3>Tierra-616</h3>
-            <p>Continuidad principal del Universo Marvel en los cómics.</p>
-          </div>
-        </a>
-      </article>
-
-      <article class="card">
-        <a href="#" style="text-decoration:none;color:inherit;">
-          <div class="media" style="background:#8e44ad;"></div>
-          <div class="content">
-            <h3>Tierra-1610 (Ultimate)</h3>
-            <p>Línea moderna y más oscura que la continuidad clásica.</p>
-          </div>
-        </a>
-      </article>
-
-      <article class="card">
-        <a href="#" style="text-decoration:none;color:inherit;">
-          <div class="media" style="background:#3498db;"></div>
-          <div class="content">
-            <h3>MCU (Tierra-199999)</h3>
-            <p>Continuidad del cine y series del Universo Cinematográfico Marvel.</p>
-          </div>
-        </a>
-      </article>
-
-      <article class="card">
-        <a href="#" style="text-decoration:none;color:inherit;">
-          <div class="media" style="background:#e74c3c;"></div>
-          <div class="content">
-            <h3>What If...?</h3>
-            <p>Realidades ramificadas que exploran decisiones alternativas.</p>
-          </div>
-        </a>
-      </article>
-
-      <article class="card">
-        <a href="#" style="text-decoration:none;color:inherit;">
-          <div class="media" style="background:#2ecc71;"></div>
-          <div class="content">
-            <h3>Spider-Verse</h3>
-            <p>Multiverso con variantes de Spider-Man y Spider-Woman.</p>
-          </div>
-        </a>
-      </article>
-
-      <article class="card">
-        <a href="#" style="text-decoration:none;color:inherit;">
-          <div class="media" style="background:#000;"></div>
-          <div class="content">
-            <h3>Tierra-2149</h3>
-            <p>Universo de Marvel Zombies.</p>
-          </div>
-        </a>
-      </article>
-    </section>
-
-    <p class="footer-note">Haz clic en cualquier tarjeta para explorar el universo correspondiente.</p>
-  </main>
+            <!-- Multiverso 9 -->
+            <div class="bg-white rounded-xl shadow hover:shadow-xl transition p-4">
+                <img src="https://upload.wikimedia.org/wikipedia/en/9/9d/Marvel_Comics_logo.svg"
+                    alt="Otras Tierras" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="text-2xl font-bold mt-4">Otras Tierras</h3>
+                <p class="text-gray-600 text-sm mt-1">
+                    Incontables realidades paralelas, cada una con su propio equilibrio de héroes y villanos.
+                </p>
+            </div>
+        </div>
+    </main>
+  <footer class="bg-gray-200 text-gray-600 text-xs py-4 mt-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p>&copy; 2025 M-Wiki. Todos los derechos reservados. | Esta página es un ejemplo de diseño web y no es un sitio web oficial de Marvel.</p>
+      </div>
+  </footer>
 </body>
 </html>
