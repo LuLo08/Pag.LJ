@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómics Destacados de Marvel - M-Wiki</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuraciones de fuente y colores base */
+        :root {
+            --marvel-red: #ED1D24;
+            --marvel-blue: #0078FF; /* Usado para enlaces */
+            --bg-light: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+        }
+        
+        /* Estilo para los títulos */
+        .title-separator {
+            border-color: var(--marvel-red);
+        }
+        /* Estilo para la imagen del cómic */
+        .comic-cover {
+            height: 350px; /* Altura fija para las imágenes */
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <div class="flex items-center">
+                <a href="index.html" class="text-3xl font-extrabold tracking-tight text-red-600">
+                    M-Wiki
+                </a>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-red-600 font-medium transition duration-150 ease-in-out">Personajes</a>
+
+                <a href="#" class="text-gray-600 hover:text-red-600 font-medium transition duration-150 ease-in-out">Equipos</a>
+
+                <a href="multiversos.html" class="text-gray-600 hover:text-red-600 font-medium transition duration-150 ease-in-out">Multiversos</a>
+
+                <a href="comics.html" class="text-red-600 font-bold border-b-2 border-red-600 transition duration-150 ease-in-out">Comics</a> </nav>
+            <div class="hidden md:block">
+                <input type="search" placeholder="Buscar en M-Wiki..." class="p-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500 transition duration-150">
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <h1 class="text-4xl font-extrabold mb-6 text-gray-900 border-b-4 title-separator pb-2">Cómics Destacados de Marvel</h1>
+        
+        <p class="text-lg text-gray-600 mb-8">
+            Explora una selección de los cómics más influyentes y conocidos del Universo Marvel. Sumérgete en historias que han definido generaciones de héroes y villanos.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer group">
+                <img src="https://placehold.co/600x400/ED1D24/fff?text=Civil+War+Cover" 
+                     alt="Civil War Cover" 
+                     class="w-full comic-cover transition duration-500 group-hover:scale-105">
+                <div class="p-5">
+                    <h3 class="text-2xl font-bold text-gray-900 group-hover:text-red-600 mb-2">Civil War</h3>
+                    <p class="text-gray-600 text-sm">Cuando el gobierno propone la "Ley de Registro de Superhumanos", los héroes se dividen en dos bandos liderados por Iron Man y Capitán América. Un conflicto que cambió el Universo Marvel para siempre.</p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer group">
+                <img src="https://placehold.co/600x400/000/fff?text=Infinity+Gauntlet+Cover" 
+                     alt="The Infinity Gauntlet Cover" 
+                     class="w-full comic-cover transition duration-500 group-hover:scale-105">
+                <div class="p-5">
+                    <h3 class="text-2xl font-bold text-gray-900 group-hover:text-red-600 mb-2">The Infinity Gauntlet</h3>
+                    <p class="text-gray-600 text-sm">Thanos obtiene el poder de las Gemas del Infinito y, con un chasquido de dedos, elimina a la mitad de toda la vida en el universo. Los héroes restantes deben unirse para detenerlo.</p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer group">
+                <img src="https://placehold.co/600x400/9400D3/fff?text=House+of+M+Cover" 
+                     alt="House of M Cover" 
+                     class="w-full comic-cover transition duration-500 group-hover:scale-105">
+                <div class="p-5">
+                    <h3 class="text-2xl font-bold text-gray-900 group-hover:text-red-600 mb-2">House of M</h3>
+                    <p class="text-gray-600 text-sm">La Bruja Escarlata altera la realidad para crear un mundo donde los mutantes son la especie dominante. Este evento tiene consecuencias masivas para toda la población mutante.</p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer group">
+                <img src="https://placehold.co/600x400/008000/fff?text=Planet+Hulk+Cover" 
+                     alt="Planet Hulk Cover" 
+                     class="w-full comic-cover transition duration-500 group-hover:scale-105">
+                <div class="p-5">
+                    <h3 class="text-2xl font-bold text-gray-900 group-hover:text-red-600 mb-2">Planet Hulk</h3>
+                    <p class="text-gray-600 text-sm">Los Illuminati destierran a Hulk al espacio, pero aterriza en un planeta salvaje donde es forzado a convertirse en gladiador. Se convierte en un líder y busca venganza.</p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer group">
+                <img src="https://placehold.co/600x400/6A5ACD/fff?text=Secret+Wars+Cover" 
+                     alt="Secret Wars Cover" 
+                     class="w-full comic-cover transition duration-500 group-hover:scale-105">
+                <div class="p-5">
+                    <h3 class="text-2xl font-bold text-gray-900 group-hover:text-red-600 mb-2">Secret Wars (1984)</h3>
+                    <p class="text-gray-600 text-sm">El Beyonder transporta a los héroes y villanos a un "Mundo Batalla" para que luchen. Spider-Man obtiene su icónico traje negro (el simbionte) en este evento.</p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer group">
+                <img src="https://placehold.co/600x400/FFD700/000?text=Old+Man+Logan+Cover" 
+                     alt="Old Man Logan Cover" 
+                     class="w-full comic-cover transition duration-500 group-hover:scale-105">
+                <div class="p-5">
+                    <h3 class="text-2xl font-bold text-gray-900 group-hover:text-red-600 mb-2">Old Man Logan</h3>
+                    <p class="text-gray-600 text-sm">En un futuro distópico donde los villanos han ganado, un anciano y pacifista Wolverine debe embarcarse en un último y violento viaje para proteger a su familia.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+    <footer class="bg-gray-200 text-gray-600 text-xs py-4 mt-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 M-Wiki. Todos los derechos reservados. | Esta página es un ejemplo de diseño web y no es un sitio web oficial de Marvel.</p>
+        </div>
+    </footer>
+</body>
+</html>

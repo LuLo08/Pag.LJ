@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-Men - Wiki Marvel</title>
+    <style>
+        /* Colores Base: Azul Oscuro, Dorado/Amarillo, Rojo (para Cyclops) */
+        .clear {
+            clear: both; 
+            height: 0;
+        }
+        /* Estilos CSS integrados */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wiki-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: 3px solid #000080; /* Borde Azul Oscuro */
+        }
+
+        header {
+            background-color: #000080; /* Azul principal */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 7px 7px 0 0;
+            margin: -25px -25px 20px -25px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px #FFD700; /* Sombra Dorada */
+        }
+
+        h2 {
+            color: #E3051B; /* Títulos de sección en Rojo/Carmesí */
+            border-bottom: 2px solid #000080; /* Subrayado Azul Oscuro */
+            padding-bottom: 5px;
+            margin-top: 25px;
+            font-size: 1.8em;
+        }
+        
+        h3 {
+            color: #000080; /* Subtítulos de miembros en Azul */
+            margin-top: 15px;
+        }
+
+        .info-box {
+            float: right;
+            width: 300px;
+            margin: 0 0 20px 20px;
+            padding: 15px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .info-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .info-box p strong {
+            color: #E3051B; /* Resaltar en Rojo */
+        }
+
+        .member-profile {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-left: 5px solid #FFD700; /* Borde Dorado para destacar */
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            overflow: auto; /* Para contener el flotador */
+        }
+        
+        .member-profile img {
+            float: left;
+            width: 80px;
+            height: 80px;
+            margin-right: 15px;
+            border-radius: 50%;
+            border: 3px solid #000080; /* Borde Azul Oscuro */
+        }
+
+        .member-profile h3 {
+            color: #E3051B;
+            margin-top: 0;
+        }
+        
+        .member-profile p {
+            margin: 5px 0;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        /* Enlaces */
+        a {
+            color: #000080; 
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wiki-container clearfix">
+
+        <header>
+            <h1>Los X-Men: La Patrulla X</h1>
+            <p>Temidos por el mundo que han jurado proteger.</p>
+        </header>
+
+        <aside class="info-box">
+            <img src="https://i.blogs.es/3f3af3/128/1366_2000.jpg">
+            <p><strong>Líder:</strong> Profesor Charles Xavier</p>
+            <p><strong>Base de Operaciones:</strong> Mansión X (Instituto Xavier para Jóvenes Superdotados)</p>
+            <p><strong>Naturaleza:</strong> Mutantes, Defensa de los Derechos Mutantes</p>
+            <p><strong>Primera Aparición:</strong> The X-Men #1 (Septiembre de 1963)</p>
+            <p><strong>Archienemigo:</strong> Magneto y La Hermandad de Mutantes</p>
+        </aside>
+
+        <section>
+            <h2>Introducción: La Causa Mutante</h2>
+            <p>
+                Los X-Men son un equipo de mutantes, humanos nacidos con el "Gen X" que les otorga habilidades extraordinarias, que generalmente se manifiestan en la pubertad. Fundado por el telépata Charles Xavier, el objetivo del equipo es doble: entrenar a jóvenes mutantes para controlar sus poderes y promover la coexistencia pacífica entre humanos y mutantes.
+            </p>
+            <p>
+                Sin embargo, su existencia es fuente constante de miedo, odio y discriminación por parte de la humanidad. El conflicto entre la visión de coexistencia del Profesor X y la postura de superioridad y resistencia activa de Magneto es el pilar filosófico de la franquicia.
+            </p>
+        </section>
+
+        <section>
+            <h2>Miembros Clave</h2>
+            
+            <div class="member-profile">
+                <img src="https://static.wikia.nocookie.net/universo-cinematografico-de-xmen/images/a/ac/Profesor_X2.png/revision/latest?cb=20160903194503&path-prefix=es">
+                <h3>Profesor X (Charles Xavier)</h3>
+                <p><strong>Poder:</strong> Telepatía a nivel Omega. Una de las mentes más poderosas del planeta.</p>
+                <p><strong>Rol:</strong> Fundador, mentor y pacifista. Lucha por el "Sueño de Xavier": la paz mutante-humana.</p>
+            </div>
+            
+            <div class="member-profile">
+                <img src="https://mythologyandbooks.wordpress.com/wp-content/uploads/2018/02/cyclops.jpg?w=616">
+                <h3>Cyclops (Scott Summers)</h3>
+                <p><strong>Poder:</strong> Rayos Ópticos. Proyecta potentes ráfagas de energía cinética de sus ojos, que solo puede contener con un visor de rubí de cuarzo.</p>
+                <p><strong>Rol:</strong> Líder de campo, Estratega y el primer X-Man.</p>
+            </div>
+            
+            <div class="member-profile">
+                <img src="https://static.wikia.nocookie.net/marvelcrossroads/images/c/cf/JEAN_GREY_EARTH_M.jpg/revision/latest/scale-to-width-down/340?cb=20150329205049">
+                <h3>Jean Grey (Fénix)</h3>
+                <p><strong>Poder:</strong> Telequinesis y Telepatía. Una de las mutantes más poderosas, también es el huésped frecuente de la fuerza cósmica del Fénix.</p>
+                <p><strong>Rol:</strong> Poderosa heroína, clave en la dinámica del equipo.</p>
+            </div>
+            
+            <div class="member-profile">
+                <img src="https://ironstudios.com/cdn/shop/files/090880_0.jpg?v=1752765779">
+                <h3>Wolverine (James "Logan" Howlett)</h3>
+                <p><strong>Poder:</strong> Factor de Curación, Garras de Adamantium y Longevidad. Un guerrero gruñón con un esqueleto revestido de metal indestructible.</p>
+                <p><strong>Rol:</strong> Miembro de la segunda generación (1975) y la cara más reconocible del equipo a nivel mundial.</p>
+            </div>
+            
+        </section>
+
+        <section>
+            <h2>Dato Curioso del Grupo</h2>
+            <p>
+                El título original de la serie en 1963 iba a ser "The Mutants". El editor de Marvel, Martin Goodman, temía que los lectores no supieran qué significaba la palabra "mutante". Stan Lee propuso entonces **"X-Men"** (Patrulla X) en su lugar, con la justificación interna de que sus poderes eran una habilidad "extra" (X-tra).
+            </p>
+        </section>
+
+        <section>
+            <h2>El Legado de los Mutantes</h2>
+            <p>
+                Los X-Men a menudo se utilizan en los cómics como una poderosa metáfora de la intolerancia, los derechos civiles y la diversidad, abordando problemas sociales complejos a través de su lucha por la aceptación. Sus adversarios más grandes, como Magneto y los Centinelas (robots gigantes cazamutantes), reflejan las amenazas del extremismo y la opresión sistémica.
+            </p>
+            <p>
+                Para más detalles, consulta la <a href="https://marvel.fandom.com/es/wiki/P%C3%A1gina_principal">Wiki Marvel oficial</a>.
+            </p>
+        </section>
+
+    </div>
+
+</body>
+</html>

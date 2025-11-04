@@ -3,54 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Índice de Personajes Marvel - M-Wiki</title>
-    <!-- Carga de Tailwind CSS para estilos modernos y responsivos -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>M-Wiki - Cómics Marvel</title>
+    <link href="index.html" rel="stylesheet">
     <style>
-        /* Configuraciones de fuente y colores base */
-        :root {
-            --marvel-red: #ED1D24;
-            --marvel-blue: #0078FF; /* Usado para enlaces */
-            --bg-light: #f9f9f9;
-        }
-
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-light);
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: #f4f7f6;
+            color: #333;
         }
-        
-        /* Estilo para los títulos */
-        .title-separator {
-            border-color: var(--marvel-red);
+        header {
+            background-color: #fff;
+            padding: 15px 40px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 24px;
+            color: #e62429; /* Color rojo de Marvel */
+            text-decoration: none;
+        }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+        }
+        nav a:hover {
+            color: #e62429;
+        }
+        .search-bar {
+            padding: 8px 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            color: #e62429;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .description {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        .comics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .comic-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+        .comic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        .comic-card img {
+            width: 100%;
+            height: 350px; /* Altura fija para las imágenes */
+            object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+            display: block;
+        }
+        .comic-info {
+            padding: 20px;
+        }
+        .comic-info h3 {
+            font-size: 22px;
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .comic-info p {
+            font-size: 15px;
+            color: #777;
+            line-height: 1.5;
         }
     </style>
 </head>
-<body class="text-gray-800">
+<body>
+    <header>
+        <a href="#" class="logo">M-Wiki</a>
+        <nav>
+            <a href="index.html">Personajes</a>
+            <a href="#">Multiversos</a>
+            <a href="comics.html">Comics</a>
+        </nav>
+        <input type="text" class="search-bar" placeholder="Buscar en M-Wiki...">
+    </header>
 
-    <!-- BARRA DE NAVEGACIÓN SUPERIOR (Sticky) -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-            <div class="flex items-center">
-                <!-- Logo Wiki -->
-                <a href="index.html" class="text-3xl font-extrabold tracking-tight text-red-600">
-                    M-Wiki
-                </a>
+    <div class="container">
+        <h1>Cómics Destacados de Marvel</h1>
+        <p class="description">Explora una selección de los cómics más influyentes y conocidos del Universo Marvel. Sumérgete en historias que han definido generaciones de héroes y villanos.</p>
+
+        <div class="comics-grid">
+            <div class="comic-card">
+                
+                <div class="comic-info">
+                    <h3>Civil War</h3>
+                    <img src="https://www.salvat.com/36288-large_default/civil-war-parte-1.jpg">
+                    <p>Cuando el gobierno propone la "Ley de Registro de Superhumanos", los héroes se dividen en dos bandos liderados por Iron Man y Capitán América. Un conflicto que cambió el Universo Marvel para siempre.</p>
+                </div>
             </div>
-            <nav class="hidden md:flex space-x-8">
-                <a href="index.html" class="text-gray-600 hover:text-red-600 font-medium transition duration-150 ease-in-out">Personajes</a>
-                <a href="multiversos.html" class="text-gray-600 hover:text-red-600 font-medium transition duration-150 ease-in-out">Multiversos</a>
-                <a href="comics.html" class="text-gray-600 hover:text-red-600 font-medium transition duration-150 ease-in-out">Comics</a>
-            </nav>
-            <!-- Barra de Búsqueda -->
-            <div class="hidden md:block">
-                <input type="search" placeholder="Buscar en M-Wiki..." class="p-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500 transition duration-150">
+
+            <div class="comic-card">
+                
+                <div class="comic-info">
+                    <h3>Secret Wars (1984)</h3>
+                    <img src ="https://m.media-amazon.com/images/I/91jbCNh+ljL._UF1000,1000_QL80_.jpg">
+                    <p>Un ser cósmico todopoderoso, el Beyonder, transporta a los héroes y villanos más grandes de la Tierra a un "Mundo Batalla" para que luchen por su entretenimiento. Spider-Man obtiene su traje negro simbionte aquí.</p>
+                </div>
+            </div>
+
+            <div class="comic-card">
+                
+                <div class="comic-info">
+                    <h3>The Infinity Gauntlet</h3>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/af/Infinity_Gauntlet_1.jpg">
+                    <p>Thanos obtiene el poder de las Gemas del Infinito y, con un chasquido de dedos, elimina a la mitad de toda la vida en el universo. Los héroes restantes deben unirse para detenerlo en una lucha desesperada.</p>
+                </div>
+            </div>
+
+            <div class="comic-card">
+                
+                <div class="comic-info">
+                    <h3>House of M</h3>
+                    <img src="https://m.media-amazon.com/images/I/919V67UVgWL._UF1000,1000_QL80_.jpg">
+                    <p>La Bruja Escarlata altera la realidad para crear un mundo donde los mutantes son la especie dominante. Cuando Wolverine recuerda la verdadera realidad, un grupo de héroes intenta restaurar el orden.</p>
+                </div>
+            </div>
+
+            <div class="comic-card">
+                
+                <div class="comic-info">
+                    <h3>Old Man Logan</h3>
+                    <img src="https://m.media-amazon.com/images/I/91kOtClJSML._AC_UF1000,1000_QL80_.jpg">
+                    <p>En un futuro distópico donde los villanos han ganado y dividido el mundo, un anciano y pacifista Wolverine debe embarcarse en un último y violento viaje para salvar a su familia.</p>
+                </div>
+            </div>
+
+            <div class="comic-card">
+                
+                <div class="comic-info">
+                    <h3>Planet Hulk</h3>
+                    <img src="https://m.media-amazon.com/images/I/81gTTH-LSLL.jpg">
+                    <p>Los Illuminati destierran a Hulk al espacio, pero aterriza en un planeta salvaje donde es forzado a convertirse en gladiador. Se convierte en un líder y busca venganza.</p>
+                </div>
+            </div>
+             <div class="comic-card">
+                
+                <div class="comic-info">
+                    <h3>Dark Phoenix Saga</h3>
+                    <img src="https://m.media-amazon.com/images/I/91pc3hQWkRL._UF1000,1000_QL80_.jpg">
+                    <p>Jean Grey se corrompe por el poder de la Fuerza Fénix, convirtiéndose en una amenaza cósmica que obliga a los X-Men a tomar decisiones imposibles.</p>
+                </div>
+            </div>
+              <div class="comic-card">
+                
+                <div class="comic-info">
+                    <h3>Kraven's Last Hunt</h3>
+                    <img src="https://m.media-amazon.com/images/I/91uX8ZqF8QL._UF1000,1000_QL80_.jpg">
+                    <p>Kraven el Cazador derrota a Spider-Man, lo entierra vivo y toma su lugar para demostrar que puede ser un héroe superior. Una historia oscura e intensa.</p>
+                </div>
+            </div>
+              <div class="comic-card">
+        
+                <div class="comic-info">
+                    <h3>Secret Invasion</h3>
+                    <img src="https://m.media-amazon.com/images/I/91x7h3Nl1lL._AC_UF1000,1000_QL80_.jpg">
+                    <p>La Tierra se da cuenta de que la raza alienígena Skrull ha estado reemplazando a héroes y villanos durante años. La pregunta central es: ¿En quién puedes confiar?</p>
+                </div>
             </div>
         </div>
-    <!-- PIE DE PÁGINA GENERAL -->
-    <footer class="bg-gray-200 text-gray-600 text-xs py-4 mt-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p>&copy; 2025 M-Wiki. Todos los derechos reservados. | Esta página es un ejemplo de diseño web y no es un sitio web oficial de Marvel.</p>
-        </div>
-    </footer>
-    </body>
+    </div>
+</body>
+<footer>
+    <p>
+        Para más detalles, consulta la <a href="https://marvel.fandom.com/es/wiki/P%C3%A1gina_principal">Wiki Marvel oficial</a>.
+    </p>
+</footer>
 </html>

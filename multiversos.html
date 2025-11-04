@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARVEL - M.Wiki</title>
+    <link rel="icon" type="image/png" href="logoposta.png">
+    <!-- Carga de Tailwind CSS para estilos modernos y responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuraciones de fuente y colores base */
+        :root {
+            --marvel-red: #ED1D24;
+            --marvel-blue: #0078FF; /* Usado para enlaces */
+            --bg-light: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+        }
+        
+        /* Estilo para los títulos */
+        .title-separator {
+            border-color: var(--marvel-red);
+        }
+    </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1>M-Wiki</h1>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="personajes.html" style="text-decoration:none;color:#444">Personajes</a>
+        <a href="multiversos.html" style="text-decoration:none;color:#444;font-weight:800">Multiversos</a>
+        <a href="#" style="text-decoration:none;color:#444">Comics</a>
+      </nav>
+    </div>
+
+    <div class="search" role="search">
+      <input type="search" placeholder="Buscar en M-Wiki..." aria-label="Buscar"/>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <h2 class="page-title">Índice de Multiversos</h2>
+    <div class="title-underline" aria-hidden="true"></div>
+
+    <p class="intro">
+      Explora las distintas realidades y líneas temporales del universo Marvel. Haz clic en un multiverso para ver su descripción completa, personajes y eventos destacados.
+    </p>
+
+    <section class="grid" aria-label="Lista de Multiversos">
+      
+      <!-- Estas tarjetas ya están preparadas, puedes enlazarlas cuando tengas las páginas -->
+      <article class="card">
+        <a href="#" style="text-decoration:none;color:inherit;">
+          <div class="media" style="background:#f1c40f;"></div>
+          <div class="content">
+            <h3>Tierra-616</h3>
+            <p>Continuidad principal del Universo Marvel en los cómics.</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="card">
+        <a href="#" style="text-decoration:none;color:inherit;">
+          <div class="media" style="background:#8e44ad;"></div>
+          <div class="content">
+            <h3>Tierra-1610 (Ultimate)</h3>
+            <p>Línea moderna y más oscura que la continuidad clásica.</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="card">
+        <a href="#" style="text-decoration:none;color:inherit;">
+          <div class="media" style="background:#3498db;"></div>
+          <div class="content">
+            <h3>MCU (Tierra-199999)</h3>
+            <p>Continuidad del cine y series del Universo Cinematográfico Marvel.</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="card">
+        <a href="#" style="text-decoration:none;color:inherit;">
+          <div class="media" style="background:#e74c3c;"></div>
+          <div class="content">
+            <h3>What If...?</h3>
+            <p>Realidades ramificadas que exploran decisiones alternativas.</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="card">
+        <a href="#" style="text-decoration:none;color:inherit;">
+          <div class="media" style="background:#2ecc71;"></div>
+          <div class="content">
+            <h3>Spider-Verse</h3>
+            <p>Multiverso con variantes de Spider-Man y Spider-Woman.</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="card">
+        <a href="#" style="text-decoration:none;color:inherit;">
+          <div class="media" style="background:#000;"></div>
+          <div class="content">
+            <h3>Tierra-2149</h3>
+            <p>Universo de Marvel Zombies.</p>
+          </div>
+        </a>
+      </article>
+
+    </section>
+
+    <p class="footer-note">Haz clic en cualquier tarjeta para explorar el universo correspondiente.</p>
+  </main>
+</body>
+</html>
