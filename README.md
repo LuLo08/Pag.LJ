@@ -54,8 +54,13 @@ El mantenimiento incluye la gestión de errores y la planificación de futuras m
 
 <img src="/img/imger1.png" height="300">
 
-- **Desfase de Estilos (CSS):** Algunos estilos tardaban en actualizarse tras un *push*.  
+- **Desfase de Estilos (CSS):** Algunos estilos tardaban en actualizarse tras un *push*.
+
+<img src="/img/imger2.png" height="300">
+
 - **APIs:** Intentamos en dos ocasiones aplicar APIs, una de marvel y otra de GeminiAI, sin embargo era un trabajo largo y tedioso teniendo en cuenta que aún no sabemos el funcionamiento de las APIs (el instalarlas y que funcionen), llegando en un momento a tener muchos errores al momento de guardar los cambios y ni siquiera saber por qué (perdimos el control del código)
+
+<img src="/img/imger3.png" height="300"> <img src="/img/imger4.png" height="300"> <img src="/img/imger5.png" height="300">
 
 **Mejoras Futuras:**
 - **Filtro de Contenido:** Implementar una barra de búsqueda funcional que permita filtrar dinámicamente los personajes en la página de índice sin necesidad de recargar, ya que el diseño de la barra existe pero no logramos que funcione.
