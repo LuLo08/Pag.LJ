@@ -50,7 +50,10 @@ Al completar la estructura de las páginas de índice, Cómics y Multiversos, id
 El mantenimiento incluye la gestión de errores y la planificación de futuras mejoras.
 
 **Errores Encontrados:**
-- **Rutas Relativas Incorrectas:** Inicialmente, tuvimos problemas con las rutas de las imágenes y enlaces (ej. Personajes/ironman.html) al pasar de la prueba local a GitHub Pages, ya que las rutas eran sensibles a mayúsculas y minúsculas en el servidor o algunas que eran externas luego no se podían visualizar en la página y había que pasarlas a local (descargarlas).  
+- **Rutas Relativas Incorrectas:** Inicialmente, tuvimos problemas con las rutas de las imágenes y enlaces (ej. Personajes/ironman.html) al pasar de la prueba local a GitHub Pages, ya que las rutas eran sensibles a mayúsculas y minúsculas en el servidor o algunas que eran externas luego no se podían visualizar en la página y había que pasarlas a local (descargarlas).
+<a href="https://github.com/LuLo08/Pag.LJ">
+<img src="/img/imger1" height="64">
+</a> 
 - **Desfase de Estilos (CSS):** Algunos estilos tardaban en actualizarse tras un *push*.  
 - **APIs:** Intentamos en dos ocasiones aplicar APIs, una de marvel y otra de GeminiAI, sin embargo era un trabajo largo y tedioso teniendo en cuenta que aún no sabemos el funcionamiento de las APIs (el instalarlas y que funcionen), llegando en un momento a tener muchos errores al momento de guardar los cambios y ni siquiera saber por qué (perdimos el control del código)
 
