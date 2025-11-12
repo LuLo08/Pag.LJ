@@ -3,132 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cómics Destacados de Marvel - M-Wiki</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Los Cuatro Fantásticos - Wiki Marvel</title>
     <style>
-        /* Configuraciones de fuente y colores base */
-        :root {
-            --marvel-red: #ED1D24;
-            --marvel-blue: #0078FF; /* Usado para enlaces */
-            --bg-light: #f9f9f9;
+        /* Colores Base: Azul Oscuro, Blanco, Naranja (para La Cosa) */
+        .clear {
+            clear: both; 
+            height: 0;
+        }
+        /* Estilos CSS integrados */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-light);
+        .wiki-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: 3px solid #000080; /* Borde Azul Oscuro */
+        }
+
+        header {
+            background-color: #000080; /* Azul principal */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 7px 7px 0 0;
+            margin: -25px -25px 20px -25px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px #ccc; /* Sombra Gris */
+        }
+
+        h2 {
+            color: #000080; /* Títulos de sección en Azul */
+            border-bottom: 2px solid #E3051B; /* Subrayado Rojo de contraste (como el logo) */
+            padding-bottom: 5px;
+            margin-top: 25px;
+            font-size: 1.8em;
         }
         
-        /* Estilo para los títulos */
-        .title-separator {
-            border-color: var(--marvel-red);
+        h3 {
+            color: #E3051B; /* Subtítulos en Rojo */
+            margin-top: 15px;
         }
-        /* Estilo para la imagen del cómic */
-        .comic-cover {
-            height: 350px; /* Altura fija para las imágenes */
-            object-fit: cover;
+
+        .info-box {
+            float: right;
+            width: 300px;
+            margin: 0 0 20px 20px;
+            padding: 15px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .info-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .info-box p strong {
+            color: #000080; /* Resaltar en Azul */
+        }
+
+        .member-profile {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-left: 5px solid #000080;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            overflow: auto; /* Para contener el flotador */
+        }
+        
+        .member-profile img {
+            float: left;
+            width: 80px;
+            height: 80px;
+            margin-right: 15px;
+            border-radius: 50%;
+            border: 3px solid #FFD700; /* Dorado de contraste */
+        }
+
+        .member-profile h3 {
+            color: #000080;
+            margin-top: 0;
+        }
+        
+        .member-profile p {
+            margin: 5px 0;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        /* Enlaces */
+        a {
+            color: #000080; 
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
-<body class="text-gray-800">
+<body>
 
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-            <div class="flex items-center">
-                <a href="index.html" class="text-3xl font-extrabold tracking-tight text-red-600">
-                    M-Wiki
-                </a>
-            </div>
-            <nav class="hidden md:flex space-x-8">
-                <a href="index.html" class="text-gray-600 hover:text-red-600 font-medium transition duration-150 ease-in-out">Personajes</a>
+    <div class="wiki-container clearfix">
 
-                <a href="#" class="text-gray-600 hover:text-red-600 font-medium transition duration-150 ease-in-out">Equipos</a>
+        <header>
+            <h1>Los Cuatro Fantásticos</h1>
+            <p>La Primera Familia de Marvel</p>
+        </header>
 
-                <a href="multiversos.html" class="text-gray-600 hover:text-red-600 font-medium transition duration-150 ease-in-out">Multiversos</a>
+        <aside class="info-box">
+            <img src="https://play-lh.googleusercontent.com/q65jRGxxI8RSgRUqcFS7Lx--NQ8IO3UHem0NxjqVVxyTorp4NKIqJ8eSYXofM6J3vaLsy-COuJMaU1INwpI">
+            <p><strong>Líder:</strong> Reed Richards (Mr. Fantástico)</p>
+            <p><strong>Base de Operaciones:</strong> Edificio Baxter, Ciudad de Nueva York</p>
+            <p><strong>Naturaleza:</strong> Exploración científica y aventura</p>
+            <p><strong>Primera Aparición:</strong> Fantastic Four #1 (Noviembre de 1961)</p>
+            <p><strong>Enemigo Principal:</strong> Doctor Doom, Galactus</p>
+        </aside>
 
-                <a href="comics.html" class="text-red-600 font-bold border-b-2 border-red-600 transition duration-150 ease-in-out">Comics</a> </nav>
-            <div class="hidden md:block">
-                <input type="search" placeholder="Buscar en M-Wiki..." class="p-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500 transition duration-150">
-            </div>
-        </div>
-    </header>
+        <section>
+            <h2>Introducción y Origen</h2>
+            <p>
+                Los Cuatro Fantásticos son la unidad familiar y aventurera de Marvel. El grupo nació de la ambición científica de Reed Richards, quien convenció a su amigo, el piloto Ben Grimm, y a su prometida, Sue Storm, junto a su hermano menor, Johnny Storm, para realizar un vuelo espacial experimental no autorizado.
+            </p>
+            <p>
+                Durante el viaje, la nave fue bombardeada por rayos cósmicos, alterando el ADN de la tripulación y otorgándoles habilidades únicas, convirtiéndolos en la primera generación de superhéroes de la "Edad de Plata" de Marvel.
+            </p>
+        </section>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        
-        <h1 class="text-4xl font-extrabold mb-6 text-gray-900 border-b-4 title-separator pb-2">Cómics Destacados de Marvel</h1>
-        
-        <p class="text-lg text-gray-600 mb-8">
-            Explora una selección de los cómics más influyentes y conocidos del Universo Marvel. Sumérgete en historias que han definido generaciones de héroes y villanos.
-        </p>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section>
+            <h2>Miembros del Equipo</h2>
             
-            <div class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer group">
-                <img src="https://placehold.co/600x400/ED1D24/fff?text=Civil+War+Cover" 
-                     alt="Civil War Cover" 
-                     class="w-full comic-cover transition duration-500 group-hover:scale-105">
-                <div class="p-5">
-                    <h3 class="text-2xl font-bold text-gray-900 group-hover:text-red-600 mb-2">Civil War</h3>
-                    <p class="text-gray-600 text-sm">Cuando el gobierno propone la "Ley de Registro de Superhumanos", los héroes se dividen en dos bandos liderados por Iron Man y Capitán América. Un conflicto que cambió el Universo Marvel para siempre.</p>
-                </div>
+            <div class="member-profile">
+                <img src="https://lulo08.github.io/Pag.LJ/img/redrichardsss.jpg"
+                     alt="Reed Richards">
+                <h3>Reed Richards (Mr. Fantástico)</h3>
+                <p><strong>Poder:</strong> Elasticidad y Múltiple-Forma. Puede estirar, deformar y moldear su cuerpo a voluntad.</p>
+                <p><strong>Rol:</strong> Líder y Cerebro del grupo. Uno de los hombres más inteligentes del planeta.</p>
             </div>
-
-            <div class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer group">
-                <img src="https://placehold.co/600x400/000/fff?text=Infinity+Gauntlet+Cover" 
-                     alt="The Infinity Gauntlet Cover" 
-                     class="w-full comic-cover transition duration-500 group-hover:scale-105">
-                <div class="p-5">
-                    <h3 class="text-2xl font-bold text-gray-900 group-hover:text-red-600 mb-2">The Infinity Gauntlet</h3>
-                    <p class="text-gray-600 text-sm">Thanos obtiene el poder de las Gemas del Infinito y, con un chasquido de dedos, elimina a la mitad de toda la vida en el universo. Los héroes restantes deben unirse para detenerlo.</p>
-                </div>
+            
+            <div class="member-profile">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Cosplay_Invisible_Woman_Dracon_Con_2013.jpg">
+                <h3>Susan "Sue" Storm (Mujer Invisible)</h3>
+                <p><strong>Poder:</strong> Invisibilidad y Campos de Fuerza. Puede volverse invisible y proyectar campos de fuerza de energía sólida.</p>
+                <p><strong>Rol:</strong> Segunda al mando y Corazón moral del equipo. Esposa de Reed y madre de Franklin y Valeria.</p>
             </div>
-
-            <div class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer group">
-                <img src="https://placehold.co/600x400/9400D3/fff?text=House+of+M+Cover" 
-                     alt="House of M Cover" 
-                     class="w-full comic-cover transition duration-500 group-hover:scale-105">
-                <div class="p-5">
-                    <h3 class="text-2xl font-bold text-gray-900 group-hover:text-red-600 mb-2">House of M</h3>
-                    <p class="text-gray-600 text-sm">La Bruja Escarlata altera la realidad para crear un mundo donde los mutantes son la especie dominante. Este evento tiene consecuencias masivas para toda la población mutante.</p>
-                </div>
+            
+            <div class="member-profile">
+                <img src="https://lulo08.github.io/Pag.LJ/img/jhonnystormmm.jpg"
+                     alt="Jhonny Storm">
+                <h3>Johnny Storm (Antorcha Humana)</h3>
+                <p><strong>Poder:</strong> Piroquinesis y Vuelo. Puede rodearse de fuego, volar a altas velocidades y proyectar bolas de fuego.</p>
+                <p><strong>Rol:</strong> Impulso y Energía del equipo. Suele ser el miembro más joven y temerario. Su frase es: "¡Llama a mí!".</p>
             </div>
-
-            <div class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer group">
-                <img src="https://placehold.co/600x400/008000/fff?text=Planet+Hulk+Cover" 
-                     alt="Planet Hulk Cover" 
-                     class="w-full comic-cover transition duration-500 group-hover:scale-105">
-                <div class="p-5">
-                    <h3 class="text-2xl font-bold text-gray-900 group-hover:text-red-600 mb-2">Planet Hulk</h3>
-                    <p class="text-gray-600 text-sm">Los Illuminati destierran a Hulk al espacio, pero aterriza en un planeta salvaje donde es forzado a convertirse en gladiador. Se convierte en un líder y busca venganza.</p>
-                </div>
+            
+            <div class="member-profile">
+                <img src="https://lulo08.github.io/Pag.LJ/img/bengrimmm.jpg"
+                     alt="Ben Grimm">
+                <h3>Ben Grimm (La Cosa)</h3>
+                <p><strong>Poder:</strong> Súper Fuerza y Piel Rocosa. Transformado en un ser masivo de piel naranja similar a la roca, con fuerza ilimitada.</p>
+                <p><strong>Rol:</strong> Músculo, Piloto y Amigo fiel. Su frase es: "¡Es la hora de las tortas!".</p>
             </div>
+            
+        </section>
 
-            <div class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer group">
-                <img src="https://placehold.co/600x400/6A5ACD/fff?text=Secret+Wars+Cover" 
-                     alt="Secret Wars Cover" 
-                     class="w-full comic-cover transition duration-500 group-hover:scale-105">
-                <div class="p-5">
-                    <h3 class="text-2xl font-bold text-gray-900 group-hover:text-red-600 mb-2">Secret Wars (1984)</h3>
-                    <p class="text-gray-600 text-sm">El Beyonder transporta a los héroes y villanos a un "Mundo Batalla" para que luchen. Spider-Man obtiene su icónico traje negro (el simbionte) en este evento.</p>
-                </div>
-            </div>
+        <section>
+            <h2>Dato Curioso del Grupo</h2>
+            <p>
+                Los Cuatro Fantásticos fueron creados en 1961 y su éxito fue tan inmediato que se considera el verdadero inicio del Universo Marvel moderno. Stan Lee y Jack Kirby les dieron una dinámica familiar que no existía en los cómics de superhéroes de la época, mostrando sus peleas domésticas y problemas financieros además de sus aventuras.
+            </p>
+        </section>
 
-            <div class="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer group">
-                <img src="https://placehold.co/600x400/FFD700/000?text=Old+Man+Logan+Cover" 
-                     alt="Old Man Logan Cover" 
-                     class="w-full comic-cover transition duration-500 group-hover:scale-105">
-                <div class="p-5">
-                    <h3 class="text-2xl font-bold text-gray-900 group-hover:text-red-600 mb-2">Old Man Logan</h3>
-                    <p class="text-gray-600 text-sm">En un futuro distópico donde los villanos han ganado, un anciano y pacifista Wolverine debe embarcarse en un último y violento viaje para proteger a su familia.</p>
-                </div>
-            </div>
-        </div>
+        <section>
+            <h2>Legado e Impacto</h2>
+            <p>
+                El grupo ha servido como la puerta de entrada para muchos conceptos icónicos de Marvel, introduciendo personajes como el Dr. Doom (su archienemigo), Galactus, Silver Surfer y los Kree. Su base de operaciones, el Edificio Baxter, es un centro de tecnología y ciencia punta en Manhattan.
+            </p>
+            <p>
+                Para más detalles, consulta la <a href="https://marvel.fandom.com/es/wiki/P%C3%A1gina_principal">Wiki Marvel oficial</a>.
+            </p>
+        </section>
 
-    </main>
-    
-    <footer class="bg-gray-200 text-gray-600 text-xs py-4 mt-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p>&copy; 2025 M-Wiki. Todos los derechos reservados. | Esta página es un ejemplo de diseño web y no es un sitio web oficial de Marvel.</p>
-        </div>
-    </footer>
+    </div>
+
 </body>
 </html>
