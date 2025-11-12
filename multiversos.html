@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>MARVEL - M.Wiki</title> <link rel="icon" type="image/png" href="logoposta.png"> <!-- Carga de Tailwind CSS para estilos modernos y responsivos --> <script src="https://cdn.tailwindcss.com"></script> <style> /* Configuraciones de fuente y colores base */ :root { --marvel-red: #ED1D24; --marvel-blue: #0078FF; /* Usado para enlaces */ --bg-light: #f9f9f9; } body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); } /* Estilo para los títulos */ .title-separator { border-color: var(--marvel-red); } </style> </head>
+<body class="min-h-screen flex flex-col">
+    <!-- Barra superior -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+            <h1 class="text-2xl font-extrabold text-[var(--marvel-red)]">M-Wiki</h1>
+            <nav class="flex space-x-6 font-semibold text-gray-700">
+                <a href="index.html" class="hover:text-[var(--marvel-red)]">Personajes</a>
+                <a href="multiversos.html" class="text-[var(--marvel-red)] font-bold">Multiversos</a>
+                <a href="comics.html" class="hover:text-[var(--marvel-red)]">Comics</a>
+            </nav>
+            <div>
+                <input type="text" placeholder="Buscar en M-Wiki..."
+                    class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--marvel-red)]">
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="flex-grow max-w-7xl mx-auto px-6 py-10">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2">Índice de Multiversos</h2>
+        <hr class="border-t-4 title-separator w-full mb-6">
+        <p class="text-gray-700 mb-10">
+            Explora las distintas realidades y líneas temporales del Universo Marvel. Haz clic en un multiverso para ver su descripción completa, personajes y eventos destacados.
+        </p>
+
+        <!-- Grid de tarjetas -->
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Tierra-616 -->
+        <a href="tierra616.html" class="block bg-white border border-gray-300 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group">
+            <img src="https://lulo08.github.io/Pag.LJ/tierra616.jpg" 
+                 alt="Tierra-616" 
+                 class="w-full h-48 object-cover transition duration-500 group-hover:scale-105"
+                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/000/fff?text=No+Image'">
+            <div class="p-4">
+                <h2 class="text-2xl font-bold text-gray-900 group-hover:text-red-600">Tierra-616</h2>
+                <p class="text-gray-500 text-sm mt-1">El universo principal de Marvel Comics, hogar de los Vengadores originales y los X-Men clásicos.</p>
+            </div>
+
+        <!-- Tierra-1610 (Ultimate) -->
+        <a href="tierra1610.html" class="block bg-white border border-gray-300 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group">
+            <img src="https://lulo08.github.io/Pag.LJ/tierra1610.jpg" 
+                 alt="Tierra-1610" 
+                 class="w-full h-48 object-cover transition duration-500 group-hover:scale-105"
+                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/000/fff?text=No+Image'">
+            <div class="p-4">
+                <h2 class="text-2xl font-bold text-gray-900 group-hover:text-red-600">Tierra-1610 (Ultimate)</h2>
+                <p class="text-gray-500 text-sm mt-1">Un universo más moderno y realista donde surgen nuevas versiones de héroes, como Miles Morales.</p>
+            </div>
+
+        <!-- MCU -->
+        <a href="mcu.html" class="block bg-white border border-gray-300 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group">
+            <img src="https://lulo08.github.io/Pag.LJ/mcu.jpeg" 
+                 alt="MCU" 
+                 class="w-full h-48 object-cover transition duration-500 group-hover:scale-105"
+                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/000/fff?text=No+Image'">
+            <div class="p-4">
+                <h2 class="text-2xl font-bold text-gray-900 group-hover:text-red-600">Universo Cinematográfico Marvel (MCU)</h2>
+                <p class="text-gray-500 text-sm mt-1">La versión cinematográfica del multiverso, donde Iron Man, Thor y Spider-Man comparten pantalla.</p>
+            </div>
+
+        <!-- What If...? -->
+        <a href="whatif.html" class="block bg-white border border-gray-300 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group">
+            <img src="https://lulo08.github.io/Pag.LJ/whatif.jpg" 
+                 alt="What If...?" 
+                 class="w-full h-48 object-cover transition duration-500 group-hover:scale-105"
+                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/000/fff?text=No+Image'">
+            <div class="p-4">
+                <h2 class="text-2xl font-bold text-gray-900 group-hover:text-red-600">What If...?</h2>
+                <p class="text-gray-500 text-sm mt-1">Universos alternativos donde pequeños cambios crean realidades completamente distintas.</p>
+            </div>
+
+        <!-- Spider-Verse -->
+        <a href="spiderverse.html" class="block bg-white border border-gray-300 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group">
+            <img src="https://lulo08.github.io/Pag.LJ/spiderverse.jpg" 
+                 alt="Spider-Verse" 
+                 class="w-full h-48 object-cover transition duration-500 group-hover:scale-105"
+                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/000/fff?text=No+Image'">
+            <div class="p-4">
+                <h2 class="text-2xl font-bold text-gray-900 group-hover:text-red-600">Spider-Verse</h2>
+                <p class="text-gray-500 text-sm mt-1">Una red de universos donde múltiples versiones de Spider-Man existen y colaboran entre sí.</p>
+            </div>
+
+        <!-- Tierra-2149 (Marvel Zombies) -->
+        <a href="zombies.html" class="block bg-white border border-gray-300 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group">
+            <img src="https://lulo08.github.io/Pag.LJ/zombies.jpg" 
+                 alt="Marvel Zombies" 
+                 class="w-full h-48 object-cover transition duration-500 group-hover:scale-105"
+                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/000/fff?text=No+Image'">
+            <div class="p-4">
+                <h2 class="text-2xl font-bold text-gray-900 group-hover:text-red-600">Tierra-2149 (Zombies)</h2>
+                <p class="text-gray-500 text-sm mt-1">Un universo devastado por un virus que convierte a los héroes en versiones hambrientas de carne humana.</p>
+            </div>
+        </div>
+    </main>
+  <footer class="bg-gray-200 text-gray-600 text-xs py-4 mt-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p>&copy; 2025 M-Wiki. Todos los derechos reservados. | Esta página es un ejemplo de diseño web y no es un sitio web oficial de Marvel.</p>
+      </div>
+  </footer>
+</body>
+</html>
