@@ -24,7 +24,7 @@ En este modelo, existen dos partes principales: el cliente y el servidor.
 
 
 - **Cliente:**  
-Es el navegador del usuario que solicita las páginas web. En este caso, cuando el usuario abre la página, el navegador solicita los archivos HTML, CSS, JavaScript e imágenes para mostrar el contenido de los distintos personajes de cómics. El cliente interpreta estos archivos y los muestra de manera interactiva.
+Es el navegador del usuario que solicita las páginas web. En este caso, cuando el usuario abre la página, el navegador solicita los archivos HTML, CSS e imágenes para mostrar el contenido de los distintos personajes de cómics. El cliente interpreta estos archivos y los muestra de manera interactiva.
 
 - **Servidor:**  
 Es la computadora o servicio que aloja los archivos del sitio web. El servidor se encarga de enviar los archivos solicitados por el cliente cada vez que este navega por la página. No ejecuta lógicas complejas en este caso, ya que la página de GitHub es principalmente un sitio estático.
